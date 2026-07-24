@@ -97,7 +97,7 @@
 
   *{ margin:0; padding:0; box-sizing:border-box; }
 
-  html{ scroll-behavior: smooth; }
+  html{ scroll-behavior: smooth; overflow-x: hidden; width: 100%; }
 
   body{
     font-family: var(--sans);
@@ -105,6 +105,8 @@
     color: var(--espresso);
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
+    width: 100%;
+    overscroll-behavior-x: none;
   }
 
   img{ max-width:100%; display:block; }
@@ -851,6 +853,7 @@
     padding: 4px 0 12px;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    overscroll-behavior-x: contain;
   }
 
   .price-scroll::-webkit-scrollbar{ display: none; }
@@ -1830,7 +1833,7 @@
       <div class="site-footer__links">
         <a href="tel:+31618517423">+31 6 18 51 74 23</a>
         <a href="mailto:kashulskaanna@gmail.com">kashulskaanna@gmail.com</a>
-        <span>Amsterdam, Netherlands</span>
+        <span>Wamberg 35a, 1083 CW Amsterdam</span>
       </div>
     </div>
 
