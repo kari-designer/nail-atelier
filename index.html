@@ -29,6 +29,8 @@
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/favicon.svg">
 
+<link rel="preload" as="image" href="assets/photos/IMG_3022.jpg" fetchpriority="high" imagesrcset="assets/photos/IMG_3022-mobile.jpg 525w, assets/photos/IMG_3022.jpg 1100w" imagesizes="100vw">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap">
@@ -283,6 +285,7 @@
   @media (max-width: 860px){
     .site-header__links{ display: none; }
     .site-header__burger{ display: flex; }
+    .site-header__cta{ display: none; }
   }
 
   /* ===== MOBILE MENU ===== */
@@ -1355,7 +1358,7 @@
 
   <!-- ============ HERO ============ -->
   <section class="hero" id="home">
-    <img class="hero__img" src="assets/photos/IMG_3022.jpg" alt="Glossy white ombre manicure" loading="eager" fetchpriority="high">
+    <img class="hero__img" src="assets/photos/IMG_3022.jpg" srcset="assets/photos/IMG_3022-mobile.jpg 525w, assets/photos/IMG_3022.jpg 1100w" sizes="100vw" width="1100" height="1466" alt="Glossy white ombre manicure" loading="eager" fetchpriority="high">
 
     <div class="hero__content">
       <p class="hero__eyebrow">Professional Nail Artist</p>
