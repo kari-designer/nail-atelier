@@ -9,6 +9,16 @@
 <meta name="robots" content="index, follow">
 <meta name="author" content="Anna Kashulska">
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E1P50S2P2P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-E1P50S2P2P');
+</script>
+
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="AK Beauty House">
 <meta property="og:title" content="Nail Salon Amsterdam | AK Beauty House">
@@ -55,7 +65,19 @@
     "addressCountry": "NL"
   },
   "areaServed": "Amsterdam",
-  "sameAs": ["https://instagram.com/anna.k.nails"]
+  "sameAs": ["https://instagram.com/anna.k.nails"],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Nail Treatments",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Manicure" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pedicure" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Gel Polish" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Nail Art" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Natural Finish" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Nail Extensions" } }
+    ]
+  }
 }
 </script>
 
