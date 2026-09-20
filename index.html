@@ -442,6 +442,31 @@
     flex-wrap: wrap;
   }
 
+  .hero__wedding{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 22px 32px;
+    color: var(--cream);
+    text-decoration: none;
+    background: rgba(40,25,14,.42);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+    border-top: 1px solid rgba(247,243,236,.22);
+    transition: background .25s ease;
+  }
+  .hero__wedding:hover{ background: rgba(40,25,14,.58); }
+  .hero__wedding-title{ font-family: var(--serif); font-size: 22px; letter-spacing: .02em; }
+  .hero__wedding-sub{ font-size: 12px; letter-spacing: .14em; text-transform: uppercase; }
+  @media (max-width: 640px){
+    .hero__wedding{ padding: 18px 20px; flex-direction: column; align-items: flex-start; gap: 4px; }
+  }
   .hero__actions .btn{
     background: var(--cream);
     color: var(--espresso);
@@ -1327,7 +1352,7 @@
       to{ opacity: 1; transform: translateY(0); }
     }
 
-    .hero__eyebrow, .hero__title, .hero__desc, .hero__actions, .hero__scroll{
+    .hero__eyebrow, .hero__title, .hero__desc, .hero__actions, .hero__wedding{
       opacity: 0;
       animation: heroFadeUp 1s cubic-bezier(.22,1,.36,1) forwards;
     }
@@ -1336,7 +1361,7 @@
     .hero__title{ animation-delay: .15s; }
     .hero__desc{ animation-delay: .4s; }
     .hero__actions{ animation-delay: .55s; }
-    .hero__scroll{ animation-delay: .75s; }
+    .hero__wedding{ animation-delay: .75s; }
   }
 
   /* ===== WEDDING ===== */
@@ -1421,10 +1446,10 @@
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#pricing">Services</a></li>
+      <li><a href="#wedding">Wedding</a></li>
       <li><a href="#price-list">Price</a></li>
       <li><a href="#portfolio">Portfolio</a></li>
       <li><a href="#courses">Courses</a></li>
-      <li><a href="#wedding">Wedding</a></li>
       <li class="site-header__shop"><a href="#shop">Shop</a><span class="site-header__soon">Soon</span></li>
     </ul>
     <div class="site-header__social">
@@ -1447,10 +1472,10 @@
   <a href="#home" data-menu-link>Home</a>
   <a href="#about" data-menu-link>About</a>
   <a href="#pricing" data-menu-link>Services</a>
+  <a href="#wedding" data-menu-link>Wedding Services</a>
   <a href="#price-list" data-menu-link>Price</a>
   <a href="#portfolio" data-menu-link>Portfolio</a>
   <a href="#courses" data-menu-link>Courses</a>
-  <a href="#wedding" data-menu-link>Wedding</a>
   <span class="mobile-menu__shop"><a href="#shop" data-menu-link>Shop</a><span class="site-header__soon">Soon</span></span>
   <a href="https://anna-k-nails.salonized.com/widget_bookings/new" class="btn btn--solid" target="_blank" rel="noopener">Book Appointment</a>
   <div class="site-header__social mobile-menu__social">
@@ -1479,7 +1504,10 @@
       </div>
     </div>
 
-    <span class="hero__scroll">Scroll to explore</span>
+    <a class="hero__wedding" href="#wedding">
+      <span class="hero__wedding-title">Wedding Services</span>
+      <span class="hero__wedding-sub">On-site nail services &rarr;</span>
+    </a>
   </section>
 
   <!-- ============ MANIFESTO ============ -->
