@@ -194,7 +194,13 @@
     letter-spacing: .02em;
     color: var(--cream);
     text-decoration: none;
+    white-space: nowrap;
     transition: color .35s ease;
+  }
+  @media (max-width: 1180px){
+    .site-header__nav{ gap: 20px; }
+    .site-header__links{ gap: 18px; }
+    .site-header__cta{ width: 180px; }
   }
 
   .site-header.is-scrolled .site-header__logo{ color: var(--espresso); }
@@ -309,7 +315,7 @@
   .site-header.is-scrolled .site-header__burger span{ background: var(--espresso); }
   .site-header.menu-open .site-header__burger span{ background: var(--espresso); }
 
-  @media (max-width: 860px){
+  @media (max-width: 1100px){
     .site-header__links{ display: none; }
     .site-header__burger{ display: flex; }
     .site-header__cta{ display: none; }
@@ -1332,6 +1338,71 @@
     .hero__actions{ animation-delay: .55s; }
     .hero__scroll{ animation-delay: .75s; }
   }
+
+  /* ===== WEDDING ===== */
+  .wedding{ background: var(--cream); text-align: center; }
+  .wedding__head{ padding: 96px 0 56px; }
+  .wedding__title{
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(38px, 5vw, 64px);
+    line-height: 1.1;
+    margin-top: 16px;
+  }
+  .wedding__sub{
+    font-size: 12px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--champagne);
+    margin-top: 18px;
+  }
+  .wedding__photo img{
+    width: 100%;
+    height: clamp(280px, 42vw, 520px);
+    object-fit: cover;
+    object-position: 50% 42%;
+  }
+  .wedding__body{ padding: 72px 0 96px; }
+  .wedding__lead{
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(26px, 3vw, 34px);
+  }
+  .wedding__text{
+    max-width: 520px;
+    margin: 16px auto 0;
+    font-size: 15px;
+    line-height: 1.8;
+    opacity: .85;
+  }
+  .wedding__facts{
+    margin: 48px auto 0;
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    padding-bottom: 44px;
+    border-bottom: 1px solid rgba(64,38,21,.18);
+  }
+  .wedding__fact svg{ color: var(--taupe); margin: 0 auto 14px; }
+  .wedding__fact h3{
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--taupe);
+  }
+  .wedding__fact p{ font-size: 13px; line-height: 1.6; margin: 10px auto 0; max-width: 220px; opacity: .8; }
+  .wedding__note{ font-family: var(--serif); font-size: clamp(20px, 2.2vw, 24px); line-height: 1.5; margin-top: 44px; }
+  .wedding__happy{ font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--champagne); margin-top: 20px; }
+  .btn--outline-dark{ color: var(--espresso); border-color: rgba(64,38,21,.4); }
+  .btn--outline-dark:hover{ background: rgba(64,38,21,.06); transform: translateY(-1px); }
+  .wedding__actions{ margin-top: 32px; display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+  @media (max-width: 900px){
+    .wedding__head{ padding: 64px 0 36px; }
+    .wedding__body{ padding: 48px 0 64px; }
+    .wedding__facts{ grid-template-columns: 1fr; gap: 28px; }
+  }
 </style>
 </head>
 <body>
@@ -1347,6 +1418,7 @@
       <li><a href="#price-list">Price</a></li>
       <li><a href="#portfolio">Portfolio</a></li>
       <li><a href="#courses">Courses</a></li>
+      <li><a href="#wedding">Wedding</a></li>
       <li class="site-header__shop"><a href="#shop">Shop</a><span class="site-header__soon">Soon</span></li>
     </ul>
     <div class="site-header__social">
@@ -1372,6 +1444,7 @@
   <a href="#price-list" data-menu-link>Price</a>
   <a href="#portfolio" data-menu-link>Portfolio</a>
   <a href="#courses" data-menu-link>Courses</a>
+  <a href="#wedding" data-menu-link>Wedding</a>
   <span class="mobile-menu__shop"><a href="#shop" data-menu-link>Shop</a><span class="site-header__soon">Soon</span></span>
   <a href="https://anna-k-nails.salonized.com/widget_bookings/new" class="btn btn--solid" target="_blank" rel="noopener">Book Appointment</a>
   <div class="site-header__social mobile-menu__social">
@@ -1798,6 +1871,40 @@
     </div>
   </section>
 
+  <!-- ============ WEDDING ============ -->
+  <section class="wedding" id="wedding">
+    <div class="wedding__head">
+      <div class="container">
+        <p class="eyebrow">On-site nail services</p>
+        <h2 class="wedding__title">Wedding Services</h2>
+        <p class="wedding__sub">Beautiful nails for your special day</p>
+      </div>
+    </div>
+
+    <div class="wedding__photo">
+      <img src="assets/photos/wedding-pearls.jpg" alt="Bride with soft pink manicure holding a pearl necklace" loading="lazy">
+    </div>
+
+    <div class="wedding__body">
+      <div class="container">
+        <h3 class="wedding__lead">Nail Services for Your Wedding Day</h3>
+        <p class="wedding__text">I provide on-site nail services for brides and their closest people, so you can enjoy a relaxed and memorable start to your special day.</p>
+      <div class="wedding__facts">
+        <div class="wedding__fact"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.4"/><path d="M17 14c2.3 0 4 1.7 4 4"/></svg><h3>Minimum 3 people</h3><p>Wedding services are available for groups of 3 people or more.</p></div>
+        <div class="wedding__fact"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/></svg><h3>At your location</h3><p>I come to your hotel, venue or any chosen location.</p></div>
+        <div class="wedding__fact"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/></svg><h3>Bride &amp; guests</h3><p>Manicures for the bride and her closest people.</p></div>
+      </div>
+
+        <p class="wedding__note">For all details, pricing and availability,<br>please contact me directly via phone or Instagram.</p>
+        <p class="wedding__happy">I&rsquo;ll be happy to answer all your questions.</p>
+        <div class="wedding__actions">
+          <a href="https://wa.me/31618517423" class="btn btn--solid" target="_blank" rel="noopener">Message on WhatsApp</a>
+          <a href="https://www.instagram.com/nails_anna_nl" class="btn btn--outline-dark" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ SHOP TEASER ============ -->
   <section class="shop-teaser" id="shop">
     <div class="container">
@@ -1825,6 +1932,7 @@
         <a href="#price-list">Price</a>
         <a href="#portfolio">Portfolio</a>
         <a href="#courses">Courses</a>
+        <a href="#wedding">Wedding</a>
       </nav>
     </div>
 
@@ -1944,7 +2052,7 @@
   // Gentle scroll reveal
   if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches && 'IntersectionObserver' in window) {
     const revealEls = Array.from(document.querySelectorAll(
-      '.section-head, .manifesto__text, .manifesto__sub, .price-list__title, .price-list__sub, .price-panel, .price-card, .fan-stack-block, .fan-stack__nav, .about__media, .about__quote-mark, .about__quote, .about__quote-by, .about__text, .about__stat, .courses__body, .courses__facts, .courses__media, .courses__cta, .shop-teaser__desc'
+      '.section-head, .manifesto__text, .manifesto__sub, .price-list__title, .price-list__sub, .price-panel, .price-card, .fan-stack-block, .fan-stack__nav, .about__media, .about__quote-mark, .about__quote, .about__quote-by, .about__text, .about__stat, .courses__body, .courses__facts, .courses__media, .courses__cta, .wedding__head, .wedding__body, .shop-teaser__desc'
     ));
 
     const fadeOnlySelector = '.price-panel, .price-card, .fan-stack-block';
