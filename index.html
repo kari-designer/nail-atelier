@@ -1356,11 +1356,17 @@
     color: var(--champagne);
     margin-top: 18px;
   }
+  .wedding__photo{ max-width: 1000px; margin: 0 auto; padding: 0 32px; }
   .wedding__photo img{
     width: 100%;
-    height: clamp(280px, 42vw, 520px);
+    aspect-ratio: 3 / 2;
     object-fit: cover;
-    object-position: 50% 42%;
+    object-position: 50% 50%;
+    border-radius: 4px;
+  }
+  @media (max-width: 640px){
+    .wedding__photo{ padding: 0 20px; }
+    .wedding__photo img{ aspect-ratio: 4 / 5; object-position: 42% 50%; }
   }
   .wedding__body{ padding: 72px 0 96px; }
   .wedding__lead{
